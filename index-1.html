@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDIR</title>
+    <meta property="og:title" content="PDIR! Mesin pencari uang rakyat." />
+    <meta property="og:site_name" content="PDIR" />
+    <meta property="og:description" content="PDIR! Mesin pencari apa saja. Karya anak kopi paste." />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style-1.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $('#iniform').on('submit', (e) => {
+          e.preventDefault();
+          $('#invisible').fadeIn();
+          $('#invisible1').fadeIn();
+          $('#invisible2').fadeIn();
+          $('.result-text').text($('#query').val());
+          $('#query').val('');
+          $('#query').blur();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <img src="./banteng.png" alt="" class="banteng">
+        <h1 style="color: blue; text-shadow: 0 0 3px #212121;" class="text">P<span style="color: red;">D</span><span style="color: yellow;">I</span>R</h1>
+        <div class="searchBx">
+          <form id="iniform">
+            <input type="text" placeholder="Type to search..." id="query" class="query" />
+            <!--<div class="icons">
+              <div>
+                <i id="visible" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div><i class="fa-sharp fa-solid fa-microphone-slash"></i></div>
+            </div>-->
+          </form>
+        </div>
+        <div class="wrapper">
+          <div class="show2">
+            <div id="invisible2" class="result">
+              Hasil pencarian dari "<span class="result-text"></span>":
+            </div>
+            <div class="show1">
+              <img src="./banteng.gif" alt="banteng" id="invisible1" class="hide1">        
+              <div class="show">
+                <h3 id="invisible" class="hide" style="white-space: nowrap;">
+                  &nbsp;&nbsp;&nbsp;Saya hanya tau uang rakyat
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
